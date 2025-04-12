@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 export const App = () => {
   const [timeLeft, setTimeLeft] = useState({ hr: 0, min: 0, sec: 0 });
   const [expired, setExpired] = useState(false);
+  const audioRef=useRef(null)
 
   const settings = {
     dots: true,
@@ -15,6 +16,13 @@ export const App = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(err => {
+        console.log("Autoplay blocked. Waiting for user interaction...");
+      });
+    }
+  },[]);
 
   useEffect(() => {
     const targetTime = new Date("2025-04-22T12:35:00").getTime();
@@ -37,10 +45,9 @@ export const App = () => {
 
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div className='bg-amber-100 min-h-screen flex flex-col justify-between'>
-
+      <audio ref={audioRef} src="/music/EkDantay.mp3" loop autoPlay hidden />
       <header className='w-full h-[8rem] mt- flex justify-center items-center'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
