@@ -81,7 +81,7 @@ export const App = () => {
         </div>
       </header>
 
-      <div className='felx-1 flex flex-col justify-cente items-center'>
+      <div className='flex-1 flex flex-col justify-center items-center'>
         {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
         <div className='min-w-screen flex justify-center items-center gap-[8rem] '>
 
