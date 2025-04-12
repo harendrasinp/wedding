@@ -19,31 +19,19 @@ export const App = () => {
   };
 
   useEffect(() => {
-  const handleUserInteraction = () => {
-    if (audioRef.current && !isPlaying) {
-      audioRef.current.muted = false;
-      audioRef.current.play().then(() => {
+    const unlockAudio = () => {
+      if (audioRef.current && audioRef.current.muted) {
+        audioRef.current.muted = false;
+        audioRef.current.play().catch(console.error);
         setIsPlaying(true);
-      }).catch((err) => {
-        console.log('Autoplay failed:', err);
-      });
-
-      window.removeEventListener('scroll', handleUserInteraction);
-      window.removeEventListener('touchstart', handleUserInteraction);
-      window.removeEventListener('click', handleUserInteraction); // 👈 Add this line
-    }
-  };
-
-  window.addEventListener('scroll', handleUserInteraction);
-  window.addEventListener('touchstart', handleUserInteraction);
-  window.addEventListener('click', handleUserInteraction); // 👈 Add this line too
-
-  return () => {
-    window.removeEventListener('scroll', handleUserInteraction);
-    window.removeEventListener('touchstart', handleUserInteraction);
-    window.removeEventListener('click', handleUserInteraction); // 👈 And cleanup
-  };
-}, [isPlaying]);
+      }
+      window.removeEventListener("click", unlockAudio);
+      window.removeEventListener("touchstart", unlockAudio);
+    };
+  
+    window.addEventListener("click", unlockAudio);
+    window.addEventListener("touchstart", unlockAudio);
+  }, []);
 
 
 
