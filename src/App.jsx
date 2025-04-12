@@ -62,7 +62,7 @@ export const App = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className='bg-amber-100 min-h-screen flex flex-col justify-between'>
+    <div className='bg-amber-100 min-h-[105vh] flex flex-col justify-between'>
       <audio ref={audioRef} src="/music/EkDantay.mp3" loop muted hidden />
       <header className='w-full h-[8rem] mt- flex justify-center items-center'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
