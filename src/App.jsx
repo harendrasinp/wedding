@@ -54,6 +54,7 @@ export const App = () => {
         <div
           onTouchStart={handlePlay}
           onClick={handlePlay}
+          onScroll={handlePlay}
           className="fixed top-0 left-0 w-full h-full bg-transparent z-50">
         </div>
       )}
