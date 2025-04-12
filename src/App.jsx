@@ -50,7 +50,7 @@ export const App = () => {
   }, [timeLeft])
 
   return (
-    <div className='bg-amber-100 min-h-[105vh] flex flex-col justify-between'>
+    <div className='bg-amber-100/60 min-h-[105vh] flex flex-col justify-between'>
       <audio ref={audioRef} src="/music/EkDantay.mp3" loop autoPlay hidden />
       <header className='w-full h-[8rem] mt- flex justify-center items-center'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
@@ -97,21 +97,21 @@ export const App = () => {
           <Slider {...settings} className='flex justify-center items-center w-[20.5rem] border-4 border-y-amber-400/25'>
             {/* <div className='flex justify-center items-center'> */}
             <div className='w-[19rem] h-[11rem]'>
-              <img className='w-full h-full' src="/images/background.jpg" alt="g" />
+              <img className='w-full h-full' src="/images/b1.jpg" alt="g" />
             </div>
             <div className='w-[19rem] h-[11rem]'>
-              <img className='w-full h-full' src="/images/background.jpg" alt="g" />
+              <img className='w-full h-full' src="/images/b2.jpg" alt="g" />
             </div>
             <div className='w-[19rem] h-[11rem]'>
-              <img className='w-full h-full' src="/images/background.jpg" alt="g" />
+              <img className='w-full h-full' src="/images/b3.jpg" alt="g" />
             </div>
             {/* </div> */}
           </Slider>
         </div>
 
         <div className='mt-5 flex flex-col justify-center items-center '>
-          <div className='text-amber-900 text-[1.5rem]'>Location</div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.939596231571!2d74.47035617402565!3d21.549217069701946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf6c5f7828f8a1%3A0x374db74fadedcc02!2sSantaji%20Tailik%20mangal%20Karyalay!5e0!3m2!1sen!2sin!4v1744484040905!5m2!1sen!2sin" width="310" height="250" style={{ border:0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          <div className='text-amber-900 text-[1.5rem] tangerine-regular'>Location</div>
+          <iframe className='w-[18rem] h-[10rem] border-8 border-amber-950' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.939596231571!2d74.47035617402565!3d21.549217069701946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf6c5f7828f8a1%3A0x374db74fadedcc02!2sSantaji%20Tailik%20mangal%20Karyalay!5e0!3m2!1sen!2sin!4v1744484040905!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
 
