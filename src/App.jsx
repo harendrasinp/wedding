@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 export const App = () => {
   const [timeLeft, setTimeLeft] = useState({ hr: 0, min: 0, sec: 0 });
   const [expired, setExpired] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef=useRef(null)
 
   const settings = {
@@ -16,13 +17,27 @@ export const App = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.play().catch(err => {
-        console.log("Autoplay blocked. Waiting for user interaction...");
-      });
-    }
-  },[]);
+    const handleUserInteraction = () => {
+      if (audioRef.current && !isPlaying) {
+        audioRef.current.play().then(() => {
+          setIsPlaying(true);
+        }).catch((err) => {
+          console.log('Autoplay failed:', err);
+        });
+        // Event listener हटा दो once it's played
+        document.removeEventListener('click', handleUserInteraction);
+      }
+    };
+
+    // Add event listener on first click/tap
+    document.addEventListener('click', handleUserInteraction);
+
+    // Cleanup
+    return () => document.removeEventListener('click', handleUserInteraction);
+  }, [isPlaying]);
+
 
   useEffect(() => {
     const targetTime = new Date("2025-04-22T12:35:00").getTime();
