@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import { motion } from 'framer-motion'
 export const App = () => {
   const [timeLeft, setTimeLeft] = useState({ hr: 0, min: 0, sec: 0 });
@@ -60,13 +59,29 @@ export const App = () => {
       </header>
 
       <div className='felx-1 flex flex-col justify-cente items-center'>
+        <div className='min-w-screen flex justify-center items-center gap-[8rem] '>
+          <div className='text-amber-900 text-[1rem] flex flex-col justify-center items-center'>
+            <div className='pacifico-regular'>Mehandi</div>
+            <div>Date:20/04/2025</div>
+          </div>
+          <div className='text-amber-900 text-[1rem] flex flex-col justify-center items-center'>
+              <div className='pacifico-regular'>Haldi</div>
+              <div>Date:21/04/2025</div>
+          </div>
+        </div>
         <div className='tangerine-regular text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
-          <Slider {...settings} className='flex justify-center items-center w-[21.5rem]'>
+          <Slider {...settings} className='flex justify-center items-center w-[20.5rem] border-4 border-y-amber-400/25'>
             {/* <div className='flex justify-center items-center'> */}
-            <div className='w-[20rem] h-[12rem]'><img className='w-full h-full' src="/images/background.jpg" alt="g" /></div>
-            <div className='w-[20rem] h-[12rem]'><img className='w-full h-full' src="/images/background.jpg" alt="g" /></div>
-            <div className='w-[20rem] h-[12rem]'><img className='w-full h-full' src="/images/background.jpg" alt="g" /></div>
+            <div className='w-[19rem] h-[11rem]'>
+              <img className='w-full h-full' src="/images/background.jpg" alt="g" />
+            </div>
+            <div className='w-[19rem] h-[11rem]'>
+              <img className='w-full h-full' src="/images/background.jpg" alt="g" />
+            </div>
+            <div className='w-[19rem] h-[11rem]'>
+              <img className='w-full h-full' src="/images/background.jpg" alt="g" />
+            </div>
             {/* </div> */}
           </Slider>
         </div>
