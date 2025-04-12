@@ -19,32 +19,32 @@ export const App = () => {
   };
 
   useEffect(() => {
-    const handleUserInteraction = () => {
-      if (audioRef.current && !isPlaying) {
-        audioRef.current.muted = false;
-        audioRef.current.play().then(() => {
-          setIsPlaying(true);
-        }).catch((err) => {
-          console.log('Autoplay failed:', err);
-        });
-  
-        window.removeEventListener('scroll', handleUserInteraction);
-        window.removeEventListener('touchstart', handleUserInteraction);
-        window.removeEventListener('click', handleUserInteraction); // 👈 Add this line
-      }
-    };
-  
-    window.addEventListener('scroll', handleUserInteraction);
-    window.addEventListener('touchstart', handleUserInteraction);
-    window.addEventListener('click', handleUserInteraction); // 👈 Add this line too
-  
-    return () => {
+  const handleUserInteraction = () => {
+    if (audioRef.current && !isPlaying) {
+      audioRef.current.muted = false;
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch((err) => {
+        console.log('Autoplay failed:', err);
+      });
+
       window.removeEventListener('scroll', handleUserInteraction);
       window.removeEventListener('touchstart', handleUserInteraction);
-      window.removeEventListener('click', handleUserInteraction); // 👈 And cleanup
-    };
-  }, [isPlaying]);
-  
+      window.removeEventListener('click', handleUserInteraction); // 👈 Add this line
+    }
+  };
+
+  window.addEventListener('scroll', handleUserInteraction);
+  window.addEventListener('touchstart', handleUserInteraction);
+  window.addEventListener('click', handleUserInteraction); // 👈 Add this line too
+
+  return () => {
+    window.removeEventListener('scroll', handleUserInteraction);
+    window.removeEventListener('touchstart', handleUserInteraction);
+    window.removeEventListener('click', handleUserInteraction); // 👈 And cleanup
+  };
+}, [isPlaying]);
+
 
 
   useEffect(() => {
