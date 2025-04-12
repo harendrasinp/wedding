@@ -18,15 +18,6 @@ export const App = () => {
     slidesToScroll: 1,
   };
 
-  const handlePlay = () => {
-    if (audioRef.current) {
-      audioRef.current.muted = false;
-      audioRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch(err => console.log("Error playing audio:", err));
-    }
-  };
-
   useEffect(() => {
     const targetTime = new Date("2025-04-22T12:35:00").getTime();
 
@@ -45,20 +36,22 @@ export const App = () => {
         setTimeLeft({ hr: hours, min: minutes, sec: seconds });
       }
     }, 1000);
-
+    
     return () => clearInterval(interval);
-  }, []);
+  },[]);
+
+  useEffect(()=>{
+    if (audioRef.current) {
+      audioRef.current.muted = false;
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch(err => console.log("Error playing audio:", err));
+    }
+  },[timeLeft])
+  
   return (
     <div className='bg-amber-100 min-h-[105vh] flex flex-col justify-between'>
-      {!isPlaying && (
-        <div
-          onTouchStart={handlePlay}
-          onClick={handlePlay}
-          onScroll={handlePlay}
-          className="fixed top-0 left-0 w-full h-full bg-transparent z-50">
-        </div>
-      )}
-      <audio ref={audioRef} src="/music/EkDantay.mp3" loop muted hidden />
+      <audio ref={audioRef} src="/music/EkDantay.mp3" loop autoPlay hidden />
       <header className='w-full h-[8rem] mt- flex justify-center items-center'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
