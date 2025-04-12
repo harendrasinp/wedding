@@ -18,22 +18,14 @@ export const App = () => {
     slidesToScroll: 1,
   };
 
-  useEffect(() => {
-    const unlockAudio = () => {
-      if (audioRef.current && audioRef.current.muted) {
-        audioRef.current.muted = false;
-        audioRef.current.play().catch(console.error);
+  const handlePlay = () => {
+    if (audioRef.current) {
+      audioRef.current.muted = false;
+      audioRef.current.play().then(() => {
         setIsPlaying(true);
-      }
-      window.removeEventListener("click", unlockAudio);
-      window.removeEventListener("touchstart", unlockAudio);
-    };
-  
-    window.addEventListener("click", unlockAudio);
-    window.addEventListener("touchstart", unlockAudio);
-  }, []);
-
-
+      }).catch(err => console.log("Error playing audio:", err));
+    }
+  };
 
   useEffect(() => {
     const targetTime = new Date("2025-04-22T12:35:00").getTime();
@@ -58,6 +50,13 @@ export const App = () => {
   }, []);
   return (
     <div className='bg-amber-100 min-h-[105vh] flex flex-col justify-between'>
+      {!isPlaying && (
+        <div
+          onTouchStart={handlePlay}
+          onClick={handlePlay}
+          className="fixed top-0 left-0 w-full h-full bg-transparent z-50">
+        </div>
+      )}
       <audio ref={audioRef} src="/music/EkDantay.mp3" loop muted hidden />
       <header className='w-full h-[8rem] mt- flex justify-center items-center'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
