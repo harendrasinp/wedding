@@ -55,12 +55,12 @@ export const App = () => {
             <div>{timeLeft.min}m</div>
             <div>{timeLeft.sec}s</div>
           </div>
-          <div className='text-amber-900'>Date:12/04/2025</div>
+          <div className='text-amber-900'>Date:22/04/2025</div>
         </div>
       </header>
 
       <div className='felx-1 flex flex-col justify-cente items-center'>
-        <div className='tangerine-regular text-[2rem] text-amber-900'>Divy wed's Vaibhav</div>
+        <div className='tangerine-regular text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
           <Slider {...settings} className='flex justify-center items-center w-[21.5rem]'>
             {/* <div className='flex justify-center items-center'> */}
@@ -74,7 +74,7 @@ export const App = () => {
 
       <footer className='h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
         <div>@2025 VayuSoftwares</div>
-        <div>The Digital Wedding Cards Developers</div>
+        <div>The Web and Digital Cards Developers</div>
       </footer>
 
     </div>
