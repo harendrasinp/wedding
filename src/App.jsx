@@ -59,16 +59,28 @@ export const App = () => {
       </header>
 
       <div className='felx-1 flex flex-col justify-cente items-center'>
+        {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
         <div className='min-w-screen flex justify-center items-center gap-[8rem] '>
+
           <div className='text-amber-900 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Mehandi</div>
             <div>Date:20/04/2025</div>
           </div>
+
           <div className='text-amber-900 text-[1rem] flex flex-col justify-center items-center'>
-              <div className='pacifico-regular'>Haldi</div>
-              <div>Date:21/04/2025</div>
+            <div className='pacifico-regular'>Haldi</div>
+            <div>Date:21/04/2025</div>
           </div>
+
         </div>
+        {/* ---------------------------------wedding Message-------------------------------------- */}
+        <div className='text-amber-900 text-[1rem] w-[15rem] text-justify'>
+          प्रथम पुजावा श्री गणपती । धन्य ती भारतीय संस्कृती ।।
+          ज्ञानेश्वराने चालवल्या भिंती । अर्जुनाच्या रथावर श्रीकृष्ण सारथी ।।
+          सर्व काही ईश्वराच्या हाती । तोच जुळवितो नाती - गोती ।।
+          वधु-वरास आशिर्वाद द्यावेत हीच आमची नम्र विनंती
+        </div>
+        {/* --------------------------------Corosel----------------------------------------------- */}
         <div className='tangerine-regular text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
           <Slider {...settings} className='flex justify-center items-center w-[20.5rem] border-4 border-y-amber-400/25'>
@@ -87,7 +99,7 @@ export const App = () => {
         </div>
       </div>
 
-      <footer className='h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
+      <footer className='mt-5 h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
         <div>@2025 VayuSoftwares</div>
         <div>The Web and Digital Cards Developers</div>
       </footer>
