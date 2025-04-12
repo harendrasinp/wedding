@@ -18,7 +18,7 @@ export const App = () => {
   };
 
   useEffect(() => {
-    const targetTime = new Date("2025-04-22T12:00:00").getTime();
+    const targetTime = new Date("2025-04-22T12:35:00").getTime();
 
     const interval = setInterval(() => {
       const now = Date.now();
