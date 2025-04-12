@@ -21,6 +21,7 @@ export const App = () => {
   useEffect(() => {
     const handleUserInteraction = () => {
       if (audioRef.current && !isPlaying) {
+        audioRef.current.muted = false;
         audioRef.current.play().then(() => {
           setIsPlaying(true);
         }).catch((err) => {
@@ -62,7 +63,7 @@ export const App = () => {
   }, []);
   return (
     <div className='bg-amber-100 min-h-screen flex flex-col justify-between'>
-      <audio ref={audioRef} src="/music/EkDantay.mp3" loop  hidden />
+      <audio ref={audioRef} src="/music/EkDantay.mp3" loop muted hidden />
       <header className='w-full h-[8rem] mt- flex justify-center items-center'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
