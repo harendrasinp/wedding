@@ -74,7 +74,7 @@ export const App = () => {
 
         </div>
         {/* ---------------------------------wedding Message-------------------------------------- */}
-        <div className='mt-5 text-amber-900 text-[1rem] min-w-screen px-8 text-justify bg-[url(/images/flowerGif.gif)] '>
+        <div className='mt-5 text-amber-900 text-[1rem] min-w-screen px-8 text-justify'>
           प्रथम पुजावा श्री गणपती । धन्य ती भारतीय संस्कृती ।।
           ज्ञानेश्वराने चालवल्या भिंती । अर्जुनाच्या रथावर श्रीकृष्ण सारथी ।।
           सर्व काही ईश्वराच्या हाती । तोच जुळवितो नाती गोती ।।
