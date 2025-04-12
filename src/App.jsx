@@ -27,15 +27,15 @@ export const App = () => {
           console.log('Autoplay failed:', err);
         });
         // Event listener हटा दो once it's played
-        document.removeEventListener('click', handleUserInteraction);
+        document.removeEventListener('scroll', handleUserInteraction);
       }
     };
 
     // Add event listener on first click/tap
-    document.addEventListener('click', handleUserInteraction);
+    document.addEventListener('scroll', handleUserInteraction);
 
     // Cleanup
-    return () => document.removeEventListener('click', handleUserInteraction);
+    return () => document.removeEventListener('scroll', handleUserInteraction);
   }, [isPlaying]);
 
 
