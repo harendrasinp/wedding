@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,7 +7,7 @@ export const App = () => {
   const [timeLeft, setTimeLeft] = useState({ hr: 0, min: 0, sec: 0 });
   const [expired, setExpired] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef=useRef(null)
+  const audioRef = useRef(null)
 
   const settings = {
     dots: true,
@@ -27,17 +27,24 @@ export const App = () => {
         }).catch((err) => {
           console.log('Autoplay failed:', err);
         });
-        // Event listener हटा दो once it's played
+  
         window.removeEventListener('scroll', handleUserInteraction);
+        window.removeEventListener('touchstart', handleUserInteraction);
+        window.removeEventListener('click', handleUserInteraction); // 👈 Add this line
       }
     };
-
-    // Add event listener on first click/tap
+  
     window.addEventListener('scroll', handleUserInteraction);
-
-    // Cleanup
-    return () => window.removeEventListener('scroll', handleUserInteraction);
+    window.addEventListener('touchstart', handleUserInteraction);
+    window.addEventListener('click', handleUserInteraction); // 👈 Add this line too
+  
+    return () => {
+      window.removeEventListener('scroll', handleUserInteraction);
+      window.removeEventListener('touchstart', handleUserInteraction);
+      window.removeEventListener('click', handleUserInteraction); // 👈 And cleanup
+    };
   }, [isPlaying]);
+  
 
 
   useEffect(() => {
@@ -122,7 +129,7 @@ export const App = () => {
         </div>
       </div>
 
-      <footer className='mt-5 h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
+      <footer className='mt-50 h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
         <div>@2025 VayuSoftwares</div>
         <div>The Web and Digital Cards Developers</div>
       </footer>
