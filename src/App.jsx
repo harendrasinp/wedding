@@ -36,19 +36,19 @@ export const App = () => {
         setTimeLeft({ hr: hours, min: minutes, sec: seconds });
       }
     }, 1000);
-    
-    return () => clearInterval(interval);
-  },[]);
 
-  useEffect(()=>{
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
     if (audioRef.current) {
       audioRef.current.muted = false;
       audioRef.current.play().then(() => {
         setIsPlaying(true);
       }).catch(err => console.log("Error playing audio:", err));
     }
-  },[timeLeft])
-  
+  }, [timeLeft])
+
   return (
     <div className='bg-amber-100 min-h-[105vh] flex flex-col justify-between'>
       <audio ref={audioRef} src="/music/EkDantay.mp3" loop autoPlay hidden />
@@ -108,9 +108,15 @@ export const App = () => {
             {/* </div> */}
           </Slider>
         </div>
-      </div>
 
-      <footer className='mt-50 h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
+        <div className='mt-5 flex flex-col justify-center items-center '>
+          <div className='text-amber-900 text-[1.5rem]'>Location</div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.939596231571!2d74.47035617402565!3d21.549217069701946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf6c5f7828f8a1%3A0x374db74fadedcc02!2sSantaji%20Tailik%20mangal%20Karyalay!5e0!3m2!1sen!2sin!4v1744484040905!5m2!1sen!2sin" width="310" height="250" style={{ border:0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+      <footer className='mt-10 h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
         <div>@2025 VayuSoftwares</div>
         <div>The Web and Digital Cards Developers</div>
       </footer>
