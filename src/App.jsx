@@ -61,24 +61,24 @@ export const App = () => {
         {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
         <div className='min-w-screen flex justify-center items-center gap-[5rem] '>
 
-          <div className='text-amber-900 text-[1rem] flex flex-col justify-center items-center'>
+          <div className='text-green-600 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Mehandi</div>
             <div className='flex justify-center items-center gap-2 text-amber-900'>
               <div>{mehandiCountdown.timeLeft.hr}h</div>
               <div>{mehandiCountdown.timeLeft.min}m</div>
               <div>{mehandiCountdown.timeLeft.sec}s</div>
             </div>
-            <div>Date:20/04/2025</div>
+            <div className='text-amber-900'>Date:20/04/2025</div>
           </div>
 
-          <div className='text-amber-900 text-[1rem] flex flex-col justify-center items-center'>
+          <div className='text-yellow-300 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Haldi</div>
             <div className='flex justify-center items-center gap2 text-amber-900'>
               <div>{haldiCountdown.timeLeft.hr}h</div>
               <div>{haldiCountdown.timeLeft.min}m</div>
               <div>{haldiCountdown.timeLeft.sec}s</div>
             </div>
-            <div>Date:21/04/2025</div>
+            <div className='text-amber-900'>Date:21/04/2025</div>
           </div>
 
         </div>
