@@ -11,7 +11,7 @@ export const App = () => {
   const audioRef = useRef(null)
 
   const settings = {
-    dots:true,
+    dots: true,
     infinite: true,
     speed: 1000,
     autoplay: true,
@@ -35,7 +35,7 @@ export const App = () => {
         setIsPlaying(true);
       }).catch(err => console.log("Error playing audio:", err));
     }
-  },[weddingCountdown.timeLeft.sec])
+  }, [weddingCountdown.timeLeft.sec])
 
   return (
     <div className='bg-[url("/images/bg4.jpeg")] bg-cover min-h-screen w-full bg-center bg-no-repeat flex flex-col justify-between'>
@@ -62,7 +62,10 @@ export const App = () => {
         <div className='min-w-screen flex justify-center items-center gap-[5rem] '>
 
           <div className='text-green-800 text-[1rem] flex flex-col justify-center items-center'>
-            <div className='pacifico-regular'>Mehandi</div>
+            <div className='flex justify-center items-center gap-1.5'>
+              <div className='pacifico-regular'>Mehandi</div>
+              <div className='w-[2rem] h-[2rem]'><img src="/images/mehandi.png" alt="mehandi" /></div>
+            </div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
               <div>{mehandiCountdown.timeLeft.hr}h</div>
               <div>{mehandiCountdown.timeLeft.min}m</div>
@@ -71,7 +74,10 @@ export const App = () => {
             <div className='text-amber-900 font-semibold'>Date:20/04/2025</div>
           </div>
           <div className='text-yellow-500 text-[1rem] flex flex-col justify-center items-center'>
-            <div className='pacifico-regular'>Haldi</div>
+            <div>
+              <div className='pacifico-regular'>Haldi</div>
+              {/* <div className='w-[2rem] h-[2rem]'><img src="/images/mehandi.png" alt="mehandi" /></div> */}
+            </div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
               <div>{haldiCountdown.timeLeft.hr}h</div>
               <div>{haldiCountdown.timeLeft.min}m</div>
