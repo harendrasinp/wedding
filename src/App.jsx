@@ -115,7 +115,7 @@ export const App = () => {
           </Slider>
         </div>
 
-        <div className='mt-5 flex flex-col justify-center items-center '>
+        <div className='mt-10 flex flex-col justify-center items-center '>
           <div className='text-amber-900 text-[2rem] font-bold tangerine-regular'>Wedding Location</div>
           <iframe className='w-[18rem] h-[10rem] border-8 border-amber-950/80' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.939596231571!2d74.47035617402565!3d21.549217069701946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf6c5f7828f8a1%3A0x374db74fadedcc02!2sSantaji%20Tailik%20mangal%20Karyalay!5e0!3m2!1sen!2sin!4v1744484040905!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
