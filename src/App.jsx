@@ -50,7 +50,7 @@ export const App = () => {
   }, [timeLeft])
 
   return (
-    <div className='bg-amber-100/60 min-h-[105vh] flex flex-col justify-between'>
+    <div className='bg-[url("/images/bg4.jpeg")] bg-cover min-h-screen w-full bg-center bg-no-repeat flex flex-col justify-between'>
       <audio ref={audioRef} src="/music/EkDantay.mp3" loop autoPlay hidden />
       <header className='w-full h-[8rem] mt- flex justify-center items-center'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
