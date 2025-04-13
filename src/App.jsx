@@ -134,8 +134,11 @@ export const App = () => {
         </footer>
       </div>
       {toggle?
-        <div className="flex justify-center items-center h-[12rem]">
+        <div className="mt-[8rem] flex flex-col justify-center items-center h-[12rem] gap-5">
           <button className='bg-amber-900 text-amber-100 px-5 py-2 rounded-[1rem]' onClick={() => setToggle(false)}>Open</button>
+          <div className='w-[13rem] h-[18rem] shadow-2xl shadow-amber-800 drop-shadow-md'>
+              <img src="/images/b4.jpg" alt="photo"/>
+          </div>
         </div> 
         : null
       }
