@@ -35,7 +35,7 @@ export const App = () => {
         setIsPlaying(true);
       }).catch(err => console.log("Error playing audio:", err));
     }
-  }, [timeLeft])
+  },[weddingCountdown.timeLeft.sec])
 
   return (
     <div className='bg-[url("/images/bg4.jpeg")] bg-cover min-h-screen w-full bg-center bg-no-repeat flex flex-col justify-between'>
