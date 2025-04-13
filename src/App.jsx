@@ -78,7 +78,7 @@ export const App = () => {
           </div>
           <div className='text-yellow-500 text-[1rem] flex flex-col justify-center items-center'>
             <div className='flex justify-center items-center'>
-              <div className='w-[2.5rem] h-[2.5rem]'><img src="/images/haldi.png" alt="mehandi" /></div>
+              <div className='w-[2.5rem] h-[2.5rem]'><img src="/images/haldi2.png" alt="mehandi" /></div>
               <div className='pacifico-regular'>Haldi</div>
             </div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
