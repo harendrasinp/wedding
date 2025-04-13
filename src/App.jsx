@@ -97,6 +97,7 @@ export const App = () => {
           <b>सौ. रत्नाबाई व श्री. राजेंद्र रमण चौधरी</b>
         </div>
         {/* --------------------------------Corosel----------------------------------------------- */}
+        <div><img className='w-[5rem] h-[5rem]' src="images/dd.png" alt="dd" /></div>
         <div className='tangerine-regular font-semibold text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
           <Slider {...settings} className='flex justify-center items-center w-[21rem] h-[12rem] border-4 border-y-amber-400/25'>
