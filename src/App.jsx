@@ -60,7 +60,7 @@ export const App = () => {
           वक्रतुण्ड महाकाय मंत्र "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा।
         </marquee>
         {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
-        <div className='min-w-screen mt-5 flex justify-center items-center gap-[5rem] '>
+        <div className='min-w-screen mt-2 flex justify-center items-center gap-[5rem] '>
 
           <div className='text-green-800 text-[1rem] flex flex-col justify-center items-center'>
             <div className='flex justify-center items-center gap-1.5'>
@@ -89,7 +89,7 @@ export const App = () => {
 
         </div>
         {/* ---------------------------------wedding Message-------------------------------------- */}
-        <div className='mt-5 text-amber-900 text-[1rem] min-w-screen px-8 text-justify'>
+        <div className='mt-3 text-amber-900 text-[1rem] min-w-screen px-8 text-justify'>
           प्रथम पुजावा श्री गणपती । धन्य ती भारतीय संस्कृती ।।
           ज्ञानेश्वराने चालवल्या भिंती । अर्जुनाच्या रथावर श्रीकृष्ण सारथी ।।
           सर्व काही ईश्वराच्या हाती । तोच जुळवितो नाती गोती ।।
@@ -100,7 +100,7 @@ export const App = () => {
         <div><img className='w-[5rem] h-[5rem]' src="images/dd.png" alt="dd" /></div>
         <div className='tangerine-regular font-semibold text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
-          <Slider {...settings} className='flex justify-center items-center w-[21rem] h-[12rem] border-4 border-y-amber-400/25'>
+          <Slider {...settings} className='flex justify-center items-center w-[21rem] h-[12rem] border-4 border-y-amber-800'>
             {/* <div className='flex justify-center items-center'> */}
             <div className='w-[19rem] h-[12rem] outline-none'>
               <img className='w-full h-[11.5rem] block' src="/images/b1.jpg" alt="g" />
@@ -122,7 +122,7 @@ export const App = () => {
         </div>
 
       </div>
-      <footer className='mt-10 h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
+      <footer className='h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
         <div>@2025 VayuSoftwares</div>
         <div>Harendrasinh.R.Parmar</div>
         <div>The Web and Digital Cards Developers Team</div>
