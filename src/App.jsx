@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Slider from "react-slick";
+import { useCountdown } from './Countdown';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from 'framer-motion'
@@ -18,27 +19,14 @@ export const App = () => {
     slidesToScroll: 1,
   };
 
-  useEffect(() => {
-    const targetTime = new Date("2025-04-22T12:35:00").getTime();
 
-    const interval = setInterval(() => {
-      const now = Date.now();
-      const diff = targetTime - now;
+  const mehandiTime = "2025-04-20T10:00:00";
+  const haldiTime = "2025-04-21T10:00:00";
+  const weddingTime = "2025-04-22T12:35:00";
 
-      if (diff <= 0) {
-        setExpired(true);
-        clearInterval(interval);
-      } else {
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        setTimeLeft({ hr: hours, min: minutes, sec: seconds });
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const mehandiCountdown = useCountdown(mehandiTime);
+  const haldiCountdown = useCountdown(haldiTime);
+  const weddingCountdown = useCountdown(weddingTime);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -60,10 +48,10 @@ export const App = () => {
 
         <div className='flex flex-col justify-center items-center'>
           <div className='text-[1.5rem] pacifico-regular text-amber-900'>Wedding Invitation</div>
-          <div className='flex justify-center items-center gap-5 text-amber-900'>
-            <div>{timeLeft.hr}h</div>
-            <div>{timeLeft.min}m</div>
-            <div>{timeLeft.sec}s</div>
+          <div className='flex justify-center items-center gap-2 text-amber-900'>
+            <div>{weddingCountdown.timeLeft.hr}h</div>
+            <div>{weddingCountdown.timeLeft.min}m</div>
+            <div>{weddingCountdown.timeLeft.sec}s</div>
           </div>
           <div className='text-amber-900'>Date:22/04/2025</div>
         </div>
@@ -71,15 +59,25 @@ export const App = () => {
 
       <div className='flex-1 flex flex-col justify-center items-center'>
         {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
-        <div className='min-w-screen flex justify-center items-center gap-[8rem] '>
+        <div className='min-w-screen flex justify-center items-center gap-[5rem] '>
 
           <div className='text-amber-900 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Mehandi</div>
+            <div className='flex justify-center items-center gap-2 text-amber-900'>
+              <div>{mehandiCountdown.timeLeft.hr}h</div>
+              <div>{mehandiCountdown.timeLeft.min}m</div>
+              <div>{mehandiCountdown.timeLeft.sec}s</div>
+            </div>
             <div>Date:20/04/2025</div>
           </div>
 
           <div className='text-amber-900 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Haldi</div>
+            <div className='flex justify-center items-center gap2 text-amber-900'>
+              <div>{haldiCountdown.timeLeft.hr}h</div>
+              <div>{haldiCountdown.timeLeft.min}m</div>
+              <div>{haldiCountdown.timeLeft.sec}s</div>
+            </div>
             <div>Date:21/04/2025</div>
           </div>
 
