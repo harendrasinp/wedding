@@ -47,7 +47,7 @@ export const App = () => {
         </motion.img>
 
         <div className='flex flex-col justify-center items-center'>
-          <div className='text-[1.5rem] pacifico-regular text-amber-900'>Wedding Invitation</div>
+          <div className='text-[1.5rem] pacifico-regular text-amber-900 '>Wedding Invitation</div>
           <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
             <div>{weddingCountdown.timeLeft.hr}h</div>
             <div>{weddingCountdown.timeLeft.min}m</div>
@@ -95,21 +95,22 @@ export const App = () => {
           प्रथम पुजावा श्री गणपती । धन्य ती भारतीय संस्कृती ।।
           ज्ञानेश्वराने चालवल्या भिंती । अर्जुनाच्या रथावर श्रीकृष्ण सारथी ।।
           सर्व काही ईश्वराच्या हाती । तोच जुळवितो नाती गोती ।।
-          वधु-वरास आशिर्वाद द्यावेत हीच आमची नम्र विनंती
+          वधु-वरास आशिर्वाद द्यावेत हीच आमची नम्र विनंती &nbsp;
+          <b>सौ. रत्नाबाई व श्री. राजेंद्र रमण चौधरी</b>
         </div>
         {/* --------------------------------Corosel----------------------------------------------- */}
-        <div className='tangerine-regular text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
+        <div className='tangerine-regular font-semibold text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
-          <Slider {...settings} className='flex justify-center items-center w-[20.5rem] h-[11.5rem] border-4 border-y-amber-400/25'>
+          <Slider {...settings} className='flex justify-center items-center w-[21rem] h-[12rem] border-4 border-y-amber-400/25'>
             {/* <div className='flex justify-center items-center'> */}
-            <div className='w-[19rem] h-[11rem] outline-none'>
-              <img className='w-full h-[11rem] block' src="/images/b1.jpg" alt="g" />
+            <div className='w-[19rem] h-[12rem] outline-none'>
+              <img className='w-full h-[11.5rem] block' src="/images/b1.jpg" alt="g" />
             </div>
-            <div className='w-[19rem] h-[11rem] outline-none'>
-              <img className='w-full h-[11rem] block' src="/images/b2.jpg" alt="g" />
+            <div className='w-[19rem] h-[12rem] outline-none'>
+              <img className='w-full h-[11.5rem] block' src="/images/b2.jpg" alt="g" />
             </div>
-            <div className='w-[19rem] h-[11rem] outline-none'>
-              <img className='w-full h-[11rem] block' src="/images/b3.jpg" alt="g" />
+            <div className='w-[19rem] h-[12rem] outline-none'>
+              <img className='w-full h-[11.5rem] block' src="/images/b3.jpg" alt="g" />
             </div>
             {/* </div> */}
           </Slider>
