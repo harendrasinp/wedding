@@ -100,7 +100,7 @@ export const App = () => {
         <div><img className='w-[5rem] h-[5rem]' src="images/dd.png" alt="dd" /></div>
         <div className='tangerine-regular font-semibold text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
-          <Slider {...settings} className='flex justify-center items-center w-[21rem] h-[11rem] border-4 border-y-amber-900'>
+          <Slider {...settings} className='bg-[url("/images/coroselbg.jpg")] bg-cover bg-no-repeat flex justify-center items-center w-[21rem] h-[11rem] border-4 border-y-amber-900'>
             <div className='w-[19rem] h-[11rem] outline-none'>
               <img className='w-full h-[10.5rem] block' src="/images/b1.jpg" alt="g" />
             </div>
@@ -110,8 +110,8 @@ export const App = () => {
             <div className='w-[19rem] h-[11rem] outline-none'>
               <img className='w-full h-[10.5rem] block' src="/images/b3.jpg" alt="g" />
             </div>
-            <div className='w-[19rem] h-[11rem] outline-none'>
-              <img className='w-full h-[10.5rem] block' src="/images/b4.jpg" alt="g" />
+            <div className='w-[19rem] h-[11rem] flex justify-center items-center'>
+              <img className='w-[8rem] h-[10.5rem]' src="/images/b4.jpg" alt="g" />
             </div>
           </Slider>
         </div>
