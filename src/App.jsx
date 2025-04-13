@@ -100,7 +100,7 @@ export const App = () => {
         <div><img className='w-[5rem] h-[5rem]' src="images/dd.png" alt="dd" /></div>
         <div className='tangerine-regular font-semibold text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
-          <Slider {...settings} className='flex justify-center items-center w-[21rem] h-[12rem] border-4 border-y-amber-800'>
+          <Slider {...settings} className='flex justify-center items-center w-[21rem] h-[12rem] border-4 border-y-amber-900'>
             {/* <div className='flex justify-center items-center'> */}
             <div className='w-[19rem] h-[12rem] outline-none'>
               <img className='w-full h-[11.5rem] block' src="/images/b1.jpg" alt="g" />
