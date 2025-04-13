@@ -73,7 +73,7 @@ export const App = () => {
 
           <div className='text-yellow-500 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Haldi</div>
-            <div className='flex justify-center items-center gap2 text-amber-900 font-semibold'>
+            <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
               <div>{haldiCountdown.timeLeft.hr}h</div>
               <div>{haldiCountdown.timeLeft.min}m</div>
               <div>{haldiCountdown.timeLeft.sec}s</div>
