@@ -48,12 +48,12 @@ export const App = () => {
 
         <div className='flex flex-col justify-center items-center'>
           <div className='text-[1.5rem] pacifico-regular text-amber-900'>Wedding Invitation</div>
-          <div className='flex justify-center items-center gap-2 text-amber-900'>
+          <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
             <div>{weddingCountdown.timeLeft.hr}h</div>
             <div>{weddingCountdown.timeLeft.min}m</div>
             <div>{weddingCountdown.timeLeft.sec}s</div>
           </div>
-          <div className='text-amber-900'>Date:22/04/2025</div>
+          <div className='text-amber-900 font-semibold'>Date:22/04/2025</div>
         </div>
       </header>
 
@@ -61,24 +61,24 @@ export const App = () => {
         {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
         <div className='min-w-screen flex justify-center items-center gap-[5rem] '>
 
-          <div className='text-green-600 text-[1rem] flex flex-col justify-center items-center'>
+          <div className='text-green-800 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Mehandi</div>
-            <div className='flex justify-center items-center gap-2 text-amber-900'>
+            <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
               <div>{mehandiCountdown.timeLeft.hr}h</div>
               <div>{mehandiCountdown.timeLeft.min}m</div>
               <div>{mehandiCountdown.timeLeft.sec}s</div>
             </div>
-            <div className='text-amber-900'>Date:20/04/2025</div>
+            <div className='text-amber-900 font-semibold'>Date:20/04/2025</div>
           </div>
 
-          <div className='text-yellow-300 text-[1rem] flex flex-col justify-center items-center'>
+          <div className='text-yellow-500 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Haldi</div>
-            <div className='flex justify-center items-center gap2 text-amber-900'>
+            <div className='flex justify-center items-center gap2 text-amber-900 font-semibold'>
               <div>{haldiCountdown.timeLeft.hr}h</div>
               <div>{haldiCountdown.timeLeft.min}m</div>
               <div>{haldiCountdown.timeLeft.sec}s</div>
             </div>
-            <div className='text-amber-900'>Date:21/04/2025</div>
+            <div className='text-amber-900 font-semibold'>Date:21/04/2025</div>
           </div>
 
         </div>
