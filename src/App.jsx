@@ -41,13 +41,13 @@ export const App = () => {
     <div>
       <div className={`bg-[url("/images/bg4.jpeg")] bg-cover h-[10rem] w-full bg-center bg-no-repeat flex flex-col  
                     justify-between overflow-hidden ${toggle?null:"mainpage"}`}>
-        <audio ref={audioRef} src="/music/EkDantay.mp3" loop autoPlay hidden />
+        <audio ref={audioRef} src="/music/Mangalashtake.mp3" loop autoPlay hidden />
         <header className='w-full h-[8rem] flex'>
           <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}>
           </motion.img>
-
+      
           <div className='flex flex-col justify-center items-center'>
             <div className='text-[1.5rem] pacifico-regular text-amber-900 '>Wedding Invitation</div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
