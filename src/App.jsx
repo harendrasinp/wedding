@@ -60,7 +60,7 @@ export const App = () => {
           वक्रतुण्ड महाकाय मंत्र "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा।
         </marquee>
         {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
-        <div className='min-w-screen flex justify-center items-center gap-[5rem] '>
+        <div className='min-w-screen flex justify-center items-center gap-[5rem] mt-5 '>
 
           <div className='text-green-800 text-[1rem] flex flex-col justify-center items-center'>
             <div className='flex justify-center items-center gap-1.5'>
