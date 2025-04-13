@@ -36,7 +36,7 @@ export const App = () => {
   }, [weddingCountdown.timeLeft.sec])
 
   return (
-    <div className='bg-[url("/images/bg4.jpeg")] bg-cover min-h-screen w-full bg-center bg-no-repeat flex flex-col justify-between'>
+    <div className='bg-[url("/images/bg4.jpeg")] bg-cover min-h-full w-full bg-center bg-no-repeat flex flex-col justify-between'>
       <audio ref={audioRef} src="/music/EkDantay.mp3" loop autoPlay hidden />
       <header className='w-full h-[8rem] flex'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
@@ -60,7 +60,7 @@ export const App = () => {
           वक्रतुण्ड महाकाय मंत्र "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा।
         </marquee>
         {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
-        <div className='min-w-screen flex justify-center items-center gap-[5rem] '>
+        <div className='min-w-screen mt-5 flex justify-center items-center gap-[5rem] '>
 
           <div className='text-green-800 text-[1rem] flex flex-col justify-center items-center'>
             <div className='flex justify-center items-center gap-1.5'>
