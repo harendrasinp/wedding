@@ -36,7 +36,7 @@ export const App = () => {
   }, [weddingCountdown.timeLeft.sec])
 
   return (
-    <div className='bg-[url("/images/bg4.jpeg")] bg-cover min-h-full w-full bg-center bg-no-repeat flex flex-col justify-between'>
+    <div className='bg-[url("/images/bg4.jpeg")] bg-cover h-full w-full bg-center bg-no-repeat flex flex-col justify-between'>
       <audio ref={audioRef} src="/music/EkDantay.mp3" loop autoPlay hidden />
       <header className='w-full h-[8rem] flex'>
         <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
