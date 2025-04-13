@@ -77,9 +77,9 @@ export const App = () => {
             <div className='text-amber-900 font-semibold'>Date:20/04/2025</div>
           </div>
           <div className='text-yellow-500 text-[1rem] flex flex-col justify-center items-center'>
-            <div>
+            <div className='flex justify-center items-center'>
+              <div className='w-[2.5rem] h-[2.5rem]'><img src="/images/haldi.png" alt="mehandi" /></div>
               <div className='pacifico-regular'>Haldi</div>
-              {/* <div className='w-[2rem] h-[2rem]'><img src="/images/mehandi.png" alt="mehandi" /></div> */}
             </div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
               <div>{haldiCountdown.timeLeft.hr}h</div>
