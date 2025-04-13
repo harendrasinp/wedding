@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+.mainpage{
+  animation: droppage 5s ease-in-out forwards;
+  overflow: hidden;
+}
+@keyframes droppage {
+  0%{
+    height: 10rem;
+  }
+  100%{
+    height:145vh;
+  }
+}
 .pacifico-regular {
   font-family: "Pacifico", cursive;
   font-weight: 400;
