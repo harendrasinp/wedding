@@ -101,7 +101,6 @@ export const App = () => {
         <div className='tangerine-regular font-semibold text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
           <Slider {...settings} className='flex justify-center items-center w-[21rem] h-[11rem] border-4 border-y-amber-900'>
-            {/* <div className='flex justify-center items-center'> */}
             <div className='w-[19rem] h-[11rem] outline-none'>
               <img className='w-full h-[10.5rem] block' src="/images/b1.jpg" alt="g" />
             </div>
@@ -111,7 +110,9 @@ export const App = () => {
             <div className='w-[19rem] h-[11rem] outline-none'>
               <img className='w-full h-[10.5rem] block' src="/images/b3.jpg" alt="g" />
             </div>
-            {/* </div> */}
+            <div className='w-[19rem] h-[11rem] outline-none'>
+              <img className='w-full h-[10.5rem] block' src="/images/b4.jpg" alt="g" />
+            </div>
           </Slider>
         </div>
 
