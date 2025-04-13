@@ -11,7 +11,7 @@ export const App = () => {
   const audioRef = useRef(null)
 
   const settings = {
-    dots: true,
+    dots:true,
     infinite: true,
     speed: 1000,
     autoplay: true,
@@ -70,7 +70,6 @@ export const App = () => {
             </div>
             <div className='text-amber-900 font-semibold'>Date:20/04/2025</div>
           </div>
-
           <div className='text-yellow-500 text-[1rem] flex flex-col justify-center items-center'>
             <div className='pacifico-regular'>Haldi</div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
@@ -92,23 +91,23 @@ export const App = () => {
         {/* --------------------------------Corosel----------------------------------------------- */}
         <div className='tangerine-regular text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
         <div>
-          <Slider {...settings} className='flex justify-center items-center w-[20.5rem] border-4 border-y-amber-400/25'>
+          <Slider {...settings} className='flex justify-center items-center w-[20.5rem] h-[11.5rem] border-4 border-y-amber-400/25'>
             {/* <div className='flex justify-center items-center'> */}
-            <div className='w-[19rem] h-[11rem]'>
-              <img className='w-full h-full' src="/images/b1.jpg" alt="g" />
+            <div className='w-[19rem] h-[11rem] outline-none'>
+              <img className='w-full h-[11rem] block' src="/images/b1.jpg" alt="g" />
             </div>
-            <div className='w-[19rem] h-[11rem]'>
-              <img className='w-full h-full' src="/images/b2.jpg" alt="g" />
+            <div className='w-[19rem] h-[11rem] outline-none'>
+              <img className='w-full h-[11rem] block' src="/images/b2.jpg" alt="g" />
             </div>
-            <div className='w-[19rem] h-[11rem]'>
-              <img className='w-full h-full' src="/images/b3.jpg" alt="g" />
+            <div className='w-[19rem] h-[11rem] outline-none'>
+              <img className='w-full h-[11rem] block' src="/images/b3.jpg" alt="g" />
             </div>
             {/* </div> */}
           </Slider>
         </div>
 
         <div className='mt-5 flex flex-col justify-center items-center '>
-          <div className='text-amber-900 text-[1.5rem] tangerine-regular'>Location</div>
+          <div className='text-amber-900 text-[2rem] font-semibold tangerine-regular'>Wedding Location</div>
           <iframe className='w-[18rem] h-[10rem] border-8 border-amber-950' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.939596231571!2d74.47035617402565!3d21.549217069701946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf6c5f7828f8a1%3A0x374db74fadedcc02!2sSantaji%20Tailik%20mangal%20Karyalay!5e0!3m2!1sen!2sin!4v1744484040905!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
