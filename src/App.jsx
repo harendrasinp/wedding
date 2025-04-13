@@ -125,7 +125,7 @@ export const App = () => {
       </div>
       <footer className='h-[5rem] w-screen bg-slate-900 text-amber-200 flex flex-col justify-center items-center'>
         <div>@2025 VayuSoftwares</div>
-        <div>Harendrasinh.R.Parmar</div>
+        <div>Harendrasinh.R.Parmar +91 986-777-5626</div>
         <div>The Web and Digital Cards Developers Team</div>
       </footer>
 
