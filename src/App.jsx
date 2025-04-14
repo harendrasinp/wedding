@@ -11,7 +11,7 @@ export const App = () => {
   const audioRef = useRef(null)
 
   const settings = {
-    dots: true,
+    dots:false,
     infinite: true,
     speed: 1000,
     autoplay: true,
@@ -113,24 +113,61 @@ export const App = () => {
           <div><img className='w-[5rem] h-[5rem]' src="images/dd.png" alt="dd" /></div>
           <div className='tangerine-regular font-semibold text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
           <div>
-            <Slider {...settings} className='bg-[url("/images/coroselbg.jpg")] bg-cover bg-no-repeat flex justify-center items-center w-[21rem] h-[11rem] border-4 border-y-amber-900'>
-              <div className='w-[19rem] h-[11rem] outline-none'>
-                <img className='w-full h-[10.5rem] block' src="/images/b1.jpg" alt="g" />
+            <Slider {...settings} className='bg-[url("/images/coroselbg.jpg")] bg-cover bg-no-repeat flex justify-center items-center w-[16rem] h-[19rem] border-4 border-y-amber-900'>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/01.jpg" alt="g" />
               </div>
-              <div className='w-[19rem] h-[11rem] outline-none'>
-                <img className='w-full h-[10.5rem] block' src="/images/b2.jpg" alt="g" />
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/02.jpg" alt="g" />
               </div>
-              <div className='w-[19rem] h-[11rem] outline-none'>
-                <img className='w-full h-[10.5rem] block' src="/images/b3.jpg" alt="g" />
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/03.jpg" alt="g" />
               </div>
-              <div className='w-[19rem] h-[11rem] flex justify-center items-center'>
-                <img className='w-[8rem] h-[10.5rem]' src="/images/b4.jpg" alt="g" />
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/04.jpg" alt="g" />
               </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/05.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/06.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/07.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/08.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/09.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/10.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/11.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/12.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/13.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/14.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/15.jpg" alt="g" />
+              </div>
+              <div className='w-[19rem] h-[19rem] outline-none'>
+                <img className='w-full h-[18.5rem] block' src="/Dimages/16.jpg" alt="g" />
+              </div>
+             
             </Slider>
           </div>
 
           <div className='mb-8 flex flex-col justify-center items-center '>
-            <div className='text-amber-900 text-[2rem] font-bold tangerine-regular mt-5'>Wedding Location</div>
+            <div className='text-amber-900 text-[2rem] font-bold tangerine-regular mt-3'>Wedding Location</div>
             <iframe className='w-[18rem] h-[10rem] border-8 border-amber-950/80' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.939596231571!2d74.47035617402565!3d21.549217069701946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf6c5f7828f8a1%3A0x374db74fadedcc02!2sSantaji%20Tailik%20mangal%20Karyalay!5e0!3m2!1sen!2sin!4v1744484040905!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
@@ -146,7 +183,7 @@ export const App = () => {
         <div className="mt-[6rem] flex flex-col justify-center items-center h-[18rem] gap-8">
           <button className='bg-amber-900 text-amber-100 px-5 py-2 rounded-[1rem]' onClick={() => setToggle(false)}>Open</button>
           <div className='w-[13rem] h-[18rem] shadow-2xl shadow-amber-800 drop-shadow-md'>
-            <img src="/images/b4.jpg" alt="photo" />
+            <img src="/Dimages/10.jpg" alt="photo" />
           </div>
           <div className='tangerine-regular font-bold text-[2rem] text-amber-950'>Divya & Vaibhav</div>
         </div>
