@@ -74,6 +74,9 @@ export const App = () => {
                 <div className='pacifico-regular'>Mehandi</div>
                 <div className='w-[2rem] h-[2rem]'><img src="/images/mehandi.png" alt="mehandi" /></div>
               </div>
+              <div className='pacifico-regular text-[0.8rem] text-amber-950'>
+                {mehandiCountdown.timeLeft.days}Day's To Go
+              </div>
               <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
                 <div>{mehandiCountdown.timeLeft.hr}h</div>
                 <div>{mehandiCountdown.timeLeft.min}m</div>
@@ -85,6 +88,9 @@ export const App = () => {
               <div className='flex justify-center items-center'>
                 <div className='w-[2.5rem] h-[2.5rem]'><img src="/images/haldi2.png" alt="mehandi" /></div>
                 <div className='pacifico-regular'>Haldi</div>
+              </div>
+              <div className='pacifico-regular text-[0.8rem] text-amber-950'>
+                {haldiCountdown.timeLeft.days}Day's To Go
               </div>
               <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
                 <div>{haldiCountdown.timeLeft.hr}h</div>
