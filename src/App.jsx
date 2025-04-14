@@ -39,7 +39,7 @@ export const App = () => {
 
   return (
     <div>
-      <div className={`bg-[url("/images/bg4.jpeg")] bg-cover h-[10rem] w-full bg-center bg-no-repeat flex flex-col  
+      <div className={`bg-[url("/images/bg4.jpeg")] bg-cover h-[9.5rem] w-full bg-center bg-no-repeat flex flex-col  
                     justify-between overflow-hidden ${toggle ? null : "mainpage"}`}>
         <audio ref={audioRef} src="/music/Mangalashtake.mp3" loop autoPlay hidden />
         <header className='w-full h-[8rem] flex'>
@@ -49,16 +49,16 @@ export const App = () => {
           </motion.img>
 
           <div className='flex flex-col justify-center items-center'>
-            <div className='text-[1.5rem] pacifico-regular text-amber-900 '>Wedding Invitation</div>
-            <div className='pacifico-regular text-[1rem] text-amber-950'>
+            <div className='text-[1.5rem] -ml-5 pacifico-regular text-amber-900 '>Wedding Invitation</div>
+            <div className='pacifico-regular text-[1rem] text-amber-950 -ml-15'>
               {weddingCountdown.timeLeft.days}Day's To Go
             </div>
-            <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
+            <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold -ml-15'>
               <div>{weddingCountdown.timeLeft.hr}h</div>
               <div>{weddingCountdown.timeLeft.min}m</div>
               <div>{weddingCountdown.timeLeft.sec}s</div>
             </div>
-            <div className='text-amber-900 font-semibold'>Date:22/04/2025</div>
+            <div className='text-amber-950 font-semibold pacifico-regular -ml-15'>Date:22/04/2025</div>
           </div>
         </header>
 
@@ -67,7 +67,7 @@ export const App = () => {
             "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा।
           </marquee>
           {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
-          <div className='min-w-screen flex justify-center items-center gap-[5rem] mt-5 '>
+          <div className='min-w-screen flex justify-center items-center gap-[5rem] '>
 
             <div className='text-green-800 text-[1rem] flex flex-col justify-center items-center'>
               <div className='flex justify-center items-center gap-1.5'>
@@ -102,7 +102,7 @@ export const App = () => {
 
           </div>
           {/* ---------------------------------wedding Message-------------------------------------- */}
-          <div className='mt-3 text-amber-900 text-[1rem] min-w-screen px-8 text-justify'>
+          <div className='mt-2 text-amber-900 text-[1rem] min-w-screen px-8 text-justify'>
             प्रथम पुजावा श्री गणपती । धन्य ती भारतीय संस्कृती ।।
             ज्ञानेश्वराने चालवल्या भिंती । अर्जुनाच्या रथावर श्रीकृष्ण सारथी ।।
             सर्व काही ईश्वराच्या हाती । तोच जुळवितो नाती गोती ।।
@@ -111,7 +111,7 @@ export const App = () => {
           </div>
           {/* --------------------------------Corosel----------------------------------------------- */}
           <div><img className='w-[5rem] h-[5rem]' src="images/dd.png" alt="dd" /></div>
-          <div className='tangerine-regular font-semibold text-[2rem] text-amber-900'>Divya wed's Vaibhav</div>
+          <div className='mt-2 mb-5 tangerine-regular font-semibold text-[2rem] text-amber-50 px-2 bg-amber-950/50 rounded-2xl'>Divya wed's Vaibhav</div>
           <div>
             <Slider {...settings} className='bg-[url("/images/coroselbg.jpg")] bg-cover bg-no-repeat flex justify-center items-center w-[16rem] h-[19rem] border-4 border-y-amber-900'>
               <div className='w-[19rem] h-[19rem] outline-none'>
@@ -163,8 +163,8 @@ export const App = () => {
             </Slider>
           </div>
 
-          <div className='mb-8 flex flex-col justify-center items-center '>
-            <div className='text-amber-900 text-[2rem] font-bold tangerine-regular mt-3'>Wedding Location</div>
+          <div className=' flex flex-col justify-center items-center '>
+            <div className='text-amber-950 text-[2rem] font-bold tangerine-regular'>Wedding Location</div>
             <iframe className='w-[18rem] h-[10rem] border-8 border-amber-950/80' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.939596231571!2d74.47035617402565!3d21.549217069701946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdf6c5f7828f8a1%3A0x374db74fadedcc02!2sSantaji%20Tailik%20mangal%20Karyalay!5e0!3m2!1sen!2sin!4v1744484040905!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
@@ -182,7 +182,7 @@ export const App = () => {
           <div className='w-[14rem] h-[18rem] shadow-2xl shadow-amber-800 drop-shadow-md'>
             <img src="/Dimages/coverpic.jpg" alt="photo" />
           </div>
-          <div className=' mt-8 tangerine-regular font-bold text-[2rem] text-amber-950'>Divya & Vaibhav</div>
+          <div className='mt-8 tangerine-regular font-bold text-[2rem] text-amber-950'>Divya & Vaibhav</div>
         </div>
         : null
       }
