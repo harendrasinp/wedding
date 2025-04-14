@@ -118,9 +118,6 @@ export const App = () => {
                 <img className='w-full h-[18.5rem] block' src="/Dimages/01.jpg" alt="g" />
               </div>
               <div className='w-[19rem] h-[19rem] outline-none'>
-                <img className='w-full h-[18.5rem] block' src="/Dimages/02.jpg" alt="g" />
-              </div>
-              <div className='w-[19rem] h-[19rem] outline-none'>
                 <img className='w-full h-[18.5rem] block' src="/Dimages/03.jpg" alt="g" />
               </div>
               <div className='w-[19rem] h-[19rem] outline-none'>
@@ -180,12 +177,12 @@ export const App = () => {
         </footer>
       </div>
       {toggle ?
-        <div className="mt-[6rem] flex flex-col justify-center items-center h-[18rem] gap-8">
+        <div className="mt-[7rem] flex flex-col justify-center items-center h-[18rem] gap-8">
           <button className='bg-amber-900 text-amber-100 px-5 py-2 rounded-[1rem]' onClick={() => setToggle(false)}>Open</button>
-          <div className='w-[13rem] h-[18rem] shadow-2xl shadow-amber-800 drop-shadow-md'>
-            <img src="/Dimages/10.jpg" alt="photo" />
+          <div className='w-[14rem] h-[18rem] shadow-2xl shadow-amber-800 drop-shadow-md'>
+            <img src="/Dimages/coverpic.jpg" alt="photo" />
           </div>
-          <div className='tangerine-regular font-bold text-[2rem] text-amber-950'>Divya & Vaibhav</div>
+          <div className=' mt-8 tangerine-regular font-bold text-[2rem] text-amber-950'>Divya & Vaibhav</div>
         </div>
         : null
       }
