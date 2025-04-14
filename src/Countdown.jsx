@@ -16,7 +16,7 @@ export const useCountdown = (targetDate) => {
         setExpired(true);
         clearInterval(interval);
       } else {
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const days = Math.ceil(diff / (1000 * 3600 * 24));
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
