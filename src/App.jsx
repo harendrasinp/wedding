@@ -61,7 +61,7 @@ export const App = () => {
 
         <div className='flex-1 flex flex-col justify-center items-center'>
           <marquee scrollamount="3" className="text-amber-900 text-[1rem] font-semibold w-[10rem]">
-            वक्रतुण्ड महाकाय मंत्र "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा।
+            "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा।
           </marquee>
           {/* ----------------------------------Mehandi and Haldi--------------------------------- */}
           <div className='min-w-screen flex justify-center items-center gap-[5rem] mt-5 '>
