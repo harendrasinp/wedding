@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import "../src/index.css"
 export const App = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [toggle,setToggle] = useState(true)
+  const [toggle, setToggle] = useState(true)
   const audioRef = useRef(null)
 
   const settings = {
@@ -35,21 +35,24 @@ export const App = () => {
         setIsPlaying(true);
       }).catch(err => console.log("Error playing audio:", err));
     }
-  },[toggle])
+  }, [toggle])
 
   return (
     <div>
       <div className={`bg-[url("/images/bg4.jpeg")] bg-cover h-[10rem] w-full bg-center bg-no-repeat flex flex-col  
-                    justify-between overflow-hidden ${toggle?null:"mainpage"}`}>
+                    justify-between overflow-hidden ${toggle ? null : "mainpage"}`}>
         <audio ref={audioRef} src="/music/Mangalashtake.mp3" loop autoPlay hidden />
         <header className='w-full h-[8rem] flex'>
           <motion.img className='w-[]rem h-full' src="/images/ganeshji.png" alt="ganeshji" initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}>
           </motion.img>
-      
+
           <div className='flex flex-col justify-center items-center'>
             <div className='text-[1.5rem] pacifico-regular text-amber-900 '>Wedding Invitation</div>
+            <div className='pacifico-regular text-[1rem] text-amber-950'>
+              {weddingCountdown.timeLeft.days}Day's To Go
+            </div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
               <div>{weddingCountdown.timeLeft.hr}h</div>
               <div>{weddingCountdown.timeLeft.min}m</div>
@@ -133,14 +136,14 @@ export const App = () => {
           <div>The Web and Digital Cards Developers Team</div>
         </footer>
       </div>
-      {toggle?
+      {toggle ?
         <div className="mt-[6rem] flex flex-col justify-center items-center h-[18rem] gap-8">
           <button className='bg-amber-900 text-amber-100 px-5 py-2 rounded-[1rem]' onClick={() => setToggle(false)}>Open</button>
           <div className='w-[13rem] h-[18rem] shadow-2xl shadow-amber-800 drop-shadow-md'>
-              <img src="/images/b4.jpg" alt="photo"/>
+            <img src="/images/b4.jpg" alt="photo" />
           </div>
-          <div className='tangerine-regular font-bold text-[2rem] shadow-amber-800'>Divya & Vaibhav</div>
-        </div> 
+          <div className='tangerine-regular font-bold text-[2rem] text-amber-950'>Divya & Vaibhav</div>
+        </div>
         : null
       }
     </div>

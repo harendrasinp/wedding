@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 
 export const useCountdown = (targetDate) => {
-  const [timeLeft, setTimeLeft] = useState({ hr: 0, min: 0, sec: 0 });
+  const [timeLeft, setTimeLeft] = useState({days:0, hr: 0, min: 0, sec: 0 });
   const [expired, setExpired] = useState(false);
 
   useEffect(() => {
@@ -16,10 +16,11 @@ export const useCountdown = (targetDate) => {
         setExpired(true);
         clearInterval(interval);
       } else {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-        setTimeLeft({ hr: hours, min: minutes, sec: seconds });
+        setTimeLeft({days, hr: hours, min: minutes, sec: seconds });
       }
     }, 1000);
 
