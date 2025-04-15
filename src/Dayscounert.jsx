@@ -8,8 +8,6 @@ export const daysCountdown = (targetDate) => {
     const target = new Date(targetDate); // Ensure this is a valid date
 
     // Debug: Check if the date is parsed correctly
-    console.log('Target Date:', target);
-    console.log('Current Date:', new Date());
 
     const interval = setInterval(() => {
       const now = new Date();
