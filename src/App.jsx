@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from 'framer-motion'
 import "../src/index.css"
+import { daysCountdown } from './Dayscounert';
 export const App = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [toggle, setToggle] = useState(true)
@@ -19,15 +20,23 @@ export const App = () => {
     slidesToScroll: 1,
   };
 
-
+// ----------------------------time counter--------------------------------
   const mehandiTime = "2025-04-20T10:00:00";
-  const haldiTime = "2025-04-21T10:00:00";
+  const haldiTime = "2025-04-21T03:00:00";
   const weddingTime = "2025-04-22T12:35:00";
 
   const mehandiCountdown = useCountdown(mehandiTime);
   const haldiCountdown = useCountdown(haldiTime);
   const weddingCountdown = useCountdown(weddingTime);
+// ------------------------------Days Counter---------------------------------
+  const mehandidate="2025-04-20T12:35:00"; 
+  const haldidate ="2025-04-21T12:00:00";
+  const Wdate="2025-04-22T12:35:00"; 
 
+  const mdate=daysCountdown(mehandidate)
+  const halddate=daysCountdown(haldidate)
+  const wedingdate=daysCountdown(Wdate)
+// ---------------------------------------------------------------------------
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.muted = false;
@@ -51,7 +60,7 @@ export const App = () => {
           <div className='flex flex-col justify-center items-center'>
             <div className='text-[1.5rem] -ml-5 pacifico-regular text-amber-900 '>Wedding Invitation</div>
             <div className='pacifico-regular text-[1rem] text-amber-950 -ml-15'>
-              {weddingCountdown.timeLeft.days}Day's To Go
+              {wedingdate.daysLeft.days}Day's To Go
             </div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold -ml-15'>
               <div>{weddingCountdown.timeLeft.hr}h</div>
@@ -75,7 +84,7 @@ export const App = () => {
                 <div className='w-[2rem] h-[2rem]'><img src="/images/mehandi.png" alt="mehandi" /></div>
               </div>
               <div className='pacifico-regular text-[0.8rem] text-amber-950'>
-                {mehandiCountdown.timeLeft.days}Day's To Go
+                {mdate.daysLeft.days}Day's To Go
               </div>
               <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
                 <div>{mehandiCountdown.timeLeft.hr}h</div>
@@ -90,7 +99,7 @@ export const App = () => {
                 <div className='pacifico-regular'>Haldi</div>
               </div>
               <div className='pacifico-regular text-[0.8rem] text-amber-950'>
-                {haldiCountdown.timeLeft.days}Day's To Go
+                {halddate.daysLeft.days}Day's To Go
               </div>
               <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
                 <div>{haldiCountdown.timeLeft.hr}h</div>
