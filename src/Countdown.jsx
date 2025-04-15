@@ -2,32 +2,25 @@
 import { useEffect, useState } from 'react';
 
 export const useCountdown = (targetDate) => {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hr: 0, min: 0, sec: 0 });
+  const [timeLeft, setTimeLeft] = useState({days:0, hr: 0, min: 0, sec: 0 });
   const [expired, setExpired] = useState(false);
 
   useEffect(() => {
-    const target = new Date(targetDate);
+    const target = new Date(targetDate).getTime();
 
     const interval = setInterval(() => {
-      const now = new Date();
+      const now = Date.now();
       const diff = target - now;
 
       if (diff <= 0) {
         setExpired(true);
         clearInterval(interval);
-        setTimeLeft({ days: 0, hr: 0, min: 0, sec: 0 });
       } else {
-        // Calendar-day based days left (changes at midnight)
-        const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-        const targetMidnight = new Date(target.getFullYear(), target.getMonth(), target.getDate());
-        const days = Math.floor((targetMidnight - todayMidnight) / (1000 * 60 * 60 * 24));
-
-        // Time left till target date
-        const hr = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const min = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const sec = Math.floor((diff % (1000 * 60)) / 1000);
-
-        setTimeLeft({ days, hr, min, sec });
+        const days = Math.ceil(diff / (1000 * 3600 * 24));
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        setTimeLeft({days, hr: hours, min: minutes, sec: seconds });
       }
     }, 1000);
 
@@ -36,3 +29,4 @@ export const useCountdown = (targetDate) => {
 
   return { timeLeft, expired };
 };
+
