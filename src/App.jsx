@@ -60,7 +60,7 @@ export const App = () => {
           <div className='flex flex-col justify-center items-center'>
             <div className='text-[1.5rem] -ml-5 pacifico-regular text-amber-900 '>Wedding Invitation</div>
             <div className='pacifico-regular text-[1rem] text-amber-950 -ml-15'>
-              {wedingdate.daysLeft.days+1}Day's To Go
+              {wedingdate.daysLeft.days}Day's To Go
             </div>
             <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold -ml-15'>
               <div>{weddingCountdown.timeLeft.hr}h</div>
@@ -84,7 +84,7 @@ export const App = () => {
                 <div className='w-[2rem] h-[2rem]'><img src="/images/mehandi.png" alt="mehandi" /></div>
               </div>
               <div className='pacifico-regular text-[0.8rem] text-amber-950'>
-                {mdate.daysLeft.days+1}Day's To Go
+                {mdate.daysLeft.days}Day's To Go
               </div>
               <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
                 <div>{mehandiCountdown.timeLeft.hr}h</div>
@@ -99,7 +99,7 @@ export const App = () => {
                 <div className='pacifico-regular'>Haldi</div>
               </div>
               <div className='pacifico-regular text-[0.8rem] text-amber-950'>
-                {halddate.daysLeft.days+1}Day's To Go
+                {halddate.daysLeft.days}Day's To Go
               </div>
               <div className='flex justify-center items-center gap-2 text-amber-900 font-semibold'>
                 <div>{haldiCountdown.timeLeft.hr}h</div>

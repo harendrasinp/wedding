@@ -15,32 +15,36 @@ export const daysCountdown = (targetDate) => {
         setExpired(true);
         setDaysLeft({ days: 0 });
       } else {
-        const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); // ceil to reduce only once per day
+        const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
         setDaysLeft({ days });
       }
     };
 
-    // Call immediately once
+    // Call initially
     calculateDaysLeft();
 
-    // Calculate milliseconds till next midnight
+    // Calculate time until next midnight
     const now = new Date();
     const nextMidnight = new Date();
-    nextMidnight.setHours(24, 0, 0, 0); // midnight of next day
+    nextMidnight.setHours(24, 0, 0, 0); // Set to midnight
     const timeUntilMidnight = nextMidnight - now;
+
+    let interval;
 
     const timeout = setTimeout(() => {
       calculateDaysLeft();
 
-      const interval = setInterval(() => {
+      // Start interval every 24 hours after first midnight
+      interval = setInterval(() => {
         calculateDaysLeft();
-      }, 24 * 60 * 60 * 1000); // Every 24 hours
-
-      // Clear interval on unmount
-      return () => clearInterval(interval);
+      }, 24 * 60 * 60 * 1000); // 24 hours
     }, timeUntilMidnight);
 
-    return () => clearTimeout(timeout);
+    // Cleanup function
+    return () => {
+      clearTimeout(timeout);
+      if (interval) clearInterval(interval);
+    };
   }, [targetDate]);
 
   return { daysLeft, expired };
